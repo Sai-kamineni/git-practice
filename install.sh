@@ -29,7 +29,7 @@ then
         echo "Git installation completed"
     fi
 else 
-    echo "Git already installed"
+    echo "Git is already installed"
 fi
 
 ###Installing mysql
@@ -48,5 +48,5 @@ then
         echo "mysql installation completed"
     fi
 else 
-    echo "mysql already installed"
+    echo "mysql is already installed"
 fi
