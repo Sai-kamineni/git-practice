@@ -23,11 +23,30 @@ then
     dnf install git -y  
     if [ $? -ne 0 ]
     then 
-        echo "Git installation not completed, please check"
+        echo "Git installation is not completed, please check"
         exist 1   #script exist here
     else    
         echo "Git installation completed"
     fi
 else 
     echo "Git already installed"
+fi
+
+###Installing mysql
+
+dnf list installed mysql
+
+if [ $? -ne 0 ]
+then 
+    echo "mysql is not installed, installing the mysql"
+    dnf install mysql -y  
+    if [ $? -ne 0 ]
+    then 
+        echo "mysql installation is not completed, please check"
+        exist 1   #script exist here
+    else    
+        echo "mysql installation completed"
+    fi
+else 
+    echo "mysql already installed"
 fi
