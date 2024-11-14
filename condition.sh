@@ -2,7 +2,7 @@
 
 number=$1
 
-if [ $numer -gt 20]
+if [ $number -gt 20 ]
 
 then 
 
