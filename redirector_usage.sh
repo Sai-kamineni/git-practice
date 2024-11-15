@@ -1,10 +1,10 @@
 #!/bin/bash
 
-LOG_FOLER="/var/log/shell-script"
+LOG_FOLDER="/var/log/shell-script"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)  #print in format 2024-11-15-10-45-55
-LOG_FILE="$LOG_FOLER/$SCRIPT_NAME-$TIMESTAMP.log"
-mkdir -p $LOG_FOLER   #creates folder if not created
+LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME-$TIMESTAMP.log"
+mkdir -p $LOG_FOLDER   #creates folder if not created
 
 USERID=$(id -u)
 R="\e[31m"
