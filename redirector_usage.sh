@@ -22,7 +22,8 @@ CHECK_ROOT(){
 }
 
 USAGE(){
-    echo -e "$R USAGE :: $N provide input arguments.."
+    echo -e "$R USAGE:: $N Provide inputs to proceed ..."
+    exit 1
 }
 
 echo "Script starting executing at $(date)"
