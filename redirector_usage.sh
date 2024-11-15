@@ -25,6 +25,8 @@ USAGE(){
     echo -e "$R USAGE :: $N provide input arguments.."
 }
 
+echo "Script starting executing at $(date)"
+
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
