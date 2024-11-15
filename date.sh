@@ -1,6 +1,6 @@
 
 
 #DATE=$(date +%F) 
-DATE=$(date +%y-%d-%m)
+DATE=$(date +%yy-%m-%d)
 
 echo "Today's date : $DATE"
