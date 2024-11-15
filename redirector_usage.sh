@@ -21,12 +21,6 @@ CHECK_ROOT(){
     fi
 }
 
-USAGE(){
-    echo -e "$R USAGE:: $N Provide inputs to proceed ..."
-    exit 1
-}
-
-echo "Script starting executing at $(date)"
 
 VALIDATE(){
     if [ $1 -ne 0 ]
@@ -37,6 +31,13 @@ VALIDATE(){
         echo -e "$2 is... $G SUCCESS $N" &>>$LOG_FILE
     fi
 }
+
+USAGE(){
+    echo -e "$R USAGE:: $N Provide inputs to proceed ..."
+    exit 1
+}
+
+echo "Script starting executing at : $(date)"
 
 CHECK_ROOT
 
