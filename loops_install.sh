@@ -33,8 +33,8 @@ do
     then
         echo "$package is not installed, installing it.."
         dnf install $package -y
-        VALIDATE $? "Installing $Package"
+        VALIDATE $? "Installing $package"
     else
-        echo "$Package is already installed"
+        echo "$package is already installed"
     fi   
 done
