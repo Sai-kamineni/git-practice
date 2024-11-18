@@ -39,7 +39,7 @@ if [ ! -z $FILES ] #true if FILES is empty, ! nakes it expression false
 then
     echo "Files are found"
     ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
-    find ${SOURCE_DIR} -name "*.log" -mtime +$DAYS | zip "$ZIP_FILE" -@
+    find ${SOURCE_DIR} -name "*.log" -mtime +$DAYS | zip "$ZIP_FILE" -@   #-@ all
 
     #check if zip file is successfully created or not
     if [ -f $ZIP_FILE ]
