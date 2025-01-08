@@ -1,0 +1,34 @@
+SELECT
+    s.sid,
+    s.serial#,
+    pga.value AS pga_used_kb,
+    s.username,
+    s.program
+FROM
+    v$session s
+JOIN
+    v$sesstat pga
+ON
+    s.sid = pga.sid
+JOIN
+    v$statname n
+ON
+    pga.statistic# = n.statistic#
+WHERE
+    n.name = 'session pga memory'
+ORDER BY
+    pga.value DESC
+FETCH FIRST 10 ROWS ONLY;
+
+
+
+
+SELECT
+    p.spid AS os_process_id,
+    p.pga_used_mem / 1024 AS pga_used_kb,
+    p.program
+FROM
+    v$process p
+ORDER BY
+    p.pga_used_mem DESC
+FETCH FIRST 10 ROWS ONLY;
