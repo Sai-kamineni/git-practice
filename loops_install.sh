@@ -25,6 +25,7 @@ VALIDATE(){
 
 CHECK_ROOT
 
+#sh loops_install.sh git myswl postfix ngnix
 
 for package in $@
 do
